@@ -14,4 +14,4 @@ python manage.py runserver
 http://127.0.0.1:8000/
 でPage not found
 →
-http://127.0.0.1:8000/
+https://teratail.com/questions/91869
