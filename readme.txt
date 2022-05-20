@@ -8,3 +8,10 @@ python manage.py runserver
 →python3を使う
 https://teratail.com/questions/237108
 →bash_profileにaliasを登録
+
+pollsを作ってから
+python manage.py runserver
+http://127.0.0.1:8000/
+でPage not found
+→
+http://127.0.0.1:8000/
