@@ -1,4 +1,4 @@
-tutorial1
+チュートリアル
 https://docs.djangoproject.com/ja/2.2/intro/tutorial01/
 似てるの
 https://programming-beginner-zeroichi.jp/articles/115
@@ -41,3 +41,13 @@ sqlite> .exist
 
 python manage.py shell
 from polls.models import Choice, Question
+
+templates>polls>index.html
+<!-- <li><a href="{% url 'detail' question.id %}">{{ question.question_text}}</a></li> -->
+うまくコメントアウトできてない
+　{% %}がDjangoので読まれるから
+あと名前空間ないとエラーになるのかも
+
+ObjectDoesNotExistではなくHttp404
+→ルーズカップリングを維持できる？
+弱い依存関係

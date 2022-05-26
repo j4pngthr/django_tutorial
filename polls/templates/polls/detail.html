@@ -1,0 +1,7 @@
+<!-- {{ question }} -->
+
+<ul> <!-- unordered list -->
+{% for choice in question.choice_set.all %} <!-- Djangoのテンプレートタグ -->
+  <li>{{ choice.choice_text }}</li>
+{% endfor %}
+</ul>
