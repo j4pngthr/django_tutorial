@@ -1,7 +1,14 @@
-<!-- {{ question }} -->
+<h1>{{ question.question_text }}</h1> <!-- 見出し -->
 
-<ul> <!-- unordered list -->
-{% for choice in question.choice_set.all %} <!-- Djangoのテンプレートタグ -->
-  <li>{{ choice.choice_text }}</li>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<!-- フォームの送信 -->
+<form action="{% url 'polls:vote' question.id %}" method="post">
+<!-- POSTに関してセキュリティ対策 -->
+{% csrf_token %}
+{% for choice in qestion.choice_set.all %}
+  <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+  <label for="choice{{ forloop.counter }}">{{ choice.choice_tex }}</label><br>
 {% endfor %}
-</ul>
+<input type="submit" value="Vote">
+</form>
