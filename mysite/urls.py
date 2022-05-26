@@ -13,10 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+# アプリで対応付けしたURLをURLconfに反映
 from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-  path('polls/', include('polls.urls')),
+  # URLから探す文字列 # 探す関数
+  path('polls/', include('polls.urls')), # URLconfにpolls.urlsを反映
   path('admin/', admin.site.urls),
 ]

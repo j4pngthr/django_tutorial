@@ -15,3 +15,29 @@ http://127.0.0.1:8000/
 でPage not found
 →
 https://teratail.com/questions/91869
+
+python manage.py runserver
+Django開発サーバの起動
+
+プロジェクトA
+　アプリケーションA
+プロジェクトB
+　アプリケーションA
+　アプリケーションB
+
+python manage.py startapp polls
+pollsはアプリケーション
+
+モデルを変更
+python manage.py makemigrations
+変更のためのマイグレーションを作成
+python manage.py migrate
+データベースに変更を適用
+
+sqlite3 db.sqlite3
+.schema
+...> ;
+sqlite> .exist
+
+python manage.py shell
+from polls.models import Choice, Question
