@@ -55,3 +55,6 @@ ObjectDoesNotExistではなくHttp404
 Questionに対するChoiceどこで確認できる？
 ブラウザで出ない
 →detail.htmlでタイポ
+
+やってないこと
+4章　競合状態
